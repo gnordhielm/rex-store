@@ -1,9 +1,11 @@
-# Rex Blankets and Stablewares Web Store
+# Rex Blankets and Stablewares - Online Store
 
-Live site at: ...
+Links
+* Live Site
+* [Progress Tracker](https://trello.com/b/Xz7ooDuB/rex-online-store)
 
 ## Billing
 
-day|time
+Date|Hours Worked
 ---|-----
-9.27|20m
+9.27|0.5
