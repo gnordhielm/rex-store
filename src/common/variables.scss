@@ -1,0 +1,21 @@
+
+// Colors
+
+$gray: #516E8A;
+
+$blue: #628EDD;
+$blue_dark: darken(saturate(adjust-hue($blue, -6), 11.07), 41.76);
+
+$green: #88A64E;
+$green_dark: darken(saturate(adjust-hue($green, 73), 47.09), 29.22);
+
+$rust: rgba(189, 137, 125, 1);
+$rust_dark: darken(saturate(adjust-hue($rust, -1), 17.35), 21.57);
+
+
+// Palette assignments
+
+$primary: #fff;
+$secondary: #fff;
+
+$base: $gray;

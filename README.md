@@ -5,7 +5,9 @@
 * [Live Site](http://rex-blankets.herokuapp.com/)
 * [Milestones/Progress Tracker](https://trello.com/b/Xz7ooDuB/rex-online-store)
 
-## Emulating Mobile in the Browser
+## Guides
+
+**Emulating Mobile in the Browser**
 
 1. Open Google Chrome.
 2. Hit `option` + `command` + `j`.
@@ -22,4 +24,4 @@ Date | Hours Worked
 -----|-------------
 9.27 | 0.75
 9.30 | 0.25
-10.1 | 0.5
+10.1 | 1.5
