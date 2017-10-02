@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "description": "Web platform for ordering custom-made equestrian products from Rex Blankets and Stablewares",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "echo'hi'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gnordhielm/rex-store.git"
   },
   "author": "Gus Nordhielm",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "stripe": "^5.1.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
 }
