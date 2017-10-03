@@ -48,7 +48,10 @@ module.exports = {
         use: extractSass.extract({
             use: [{
               loader: "css-loader",
-              options: { sourceMap: true }
+              options: { sourceMap: true, importLoaders: 1 }
+            }, {
+              loader: "postcss-loader",
+              options: { sourceMap: true, plugins: [require('autoprefixer')] }
             }, {
               loader: "sass-loader",
               options: { sourceMap: true }
