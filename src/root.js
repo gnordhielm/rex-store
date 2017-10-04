@@ -2,6 +2,7 @@
 // Libraries
 
 import angular from 'angular'
+import './libraries/semantic-icons/icon.css'
 
 // Configuration
 

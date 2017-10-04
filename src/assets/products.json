@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"name": "Banner",
+		"price": 300,
+		"blurb": "Perfect for showing off your barn’s name and logo.",
+		"description": "Our banners are made of either WeatherMax or Sunbrella fabric and a waterproof polyester thread to match. They measure 10ft long and 18in high. Piping and three lines embroidery are included in the price."
+	},
+	{
+		"id": 2,
+		"name": "Dog Gazebo",
+		"price": 350,
+		"blurb": "A perfect way to provide shelter for your dog pen and show off your brand.",
+	},
+	{
+		"id": 3,
+		"name": "Plain Drape",
+		"price": 250,
+		"blurb": "8ft x 10 ft. Looks great behind a banner.",
+		"description": "A blank sheet for behind a banner. This drape does not include a valence for it and is just a basic sheet in your main barn color, in either the WeatherMax or Sunbrella with polyester thread. It is 8ft tall and 10ft wide to fit perfectly in front of your barn."
+	},
+	{
+		"id": 4,
+		"name": "Stall Drape",
+		"price": 0,
+		"blurb": "This drape is a drape with a valence in your barn colors, in either the WeatherMax or Sunbrella with polyester thread. The valence is removable for washing, easy packing, or setting up. It is 8ft tall by 10ft wide.",
+		"description": ""
+	},
+	{
+		"id": 5,
+		"name": "Stall Guard",
+		"price": 0,
+		"blurb": "36in x 24in. Perfect for critters that like to stick their heads out their stalls.",
+		"description": "This is 36in by 24in and made with 4 clips for maximum ways to hang. It can be made from WeatherMax or Sunbrella with a polyester thread and steel buckles. The price comes with two lines of embroidery."
+	},
+	{
+		"id": 6,
+		"name": "Wrap Holder",
+		"price": 0,
+		"blurb": "20 in x 24 in. Crisp, decorative way to store your wraps.",
+		"description": "This can be made of either WeatherMax or Sunbrella with a polyester thread and two steel buckles. It is 24in by 20in, but can easily be special ordered longer to fit a sheet as well."
+	},
+	{
+		"id": 7,
+		"name": "Zipper Drapes",
+		"price": 0,
+		"blurb": "A decorative door for your dressing rooms and tack rooms.",
+		"description": "This set of drapes is for dressing rooms or tack rooms and simply has a zipper down the middle. The valence is removable and there are tie backs to keep the doors open when desired. It is 8ft tall by 10ft wide."
+	}
+]

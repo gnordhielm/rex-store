@@ -44,7 +44,7 @@ module.exports = {
       },
 
       {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         use: extractSass.extract({
             use: [{
               loader: "css-loader",
