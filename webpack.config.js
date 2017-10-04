@@ -13,7 +13,7 @@ const autoprefixer = require('autoprefixer')
 module.exports = {
 
   entry: {
-    app: './src/root.module.js'
+    app: './src/root.js'
   },
 
   output: {

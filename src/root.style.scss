@@ -1,5 +1,14 @@
 
 @import './common/variables.scss';
-
 @import './common/common.scss';
+
+@import './components/rx-app/rx-app.scss';
+@import './components/rx-navbar/rx-navbar.scss';
 @import './components/rx-home/rx-home.scss';
+
+// ROOT STYLES
+
+html, body {
+	font-size: 20px;
+	background: $light-gray;
+}
