@@ -1,11 +1,5 @@
 
-@import './common/variables';
+@import './common/variables.scss';
 
-html {
-	background: $base;
-}
-
-h1 {
-	color: $blue_dark;
-	box-shadow: 1px 1px 1px black;
-}
+@import './common/common.scss';
+@import './components/rx-home/rx-home.scss';

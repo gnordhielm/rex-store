@@ -15,19 +15,27 @@ var app = express()
 app.use(favicon(path.join(__dirname, 'src', 'assets', 'favicon.ico')))
 app.use(express.static('dist'))
 
+// resolve https to http
+app.use(function (req, res, next) {
+	if (req.headers['x-forwarded-proto'] === 'https') {
+		res.redirect('http://' + req.hostname + req.url)
+	} else {
+		next()
+	}
+})
+
 // load general middleware
 app.use(morgan('dev'))
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// set up routes - always send index when there is no other match...
-// React handles my routing.
-app.get('*', (req,res) => {
+// set up routes - always send index
+app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname, '/dist/index.html'))
 })
 
 // listen on port variable
-app.listen(port, function(){
+app.listen(port, function() {
 	var msg = `Server listening on port ${port}.`
 	var bracket = '='.repeat(msg.length+4)
 	console.log(`${bracket}\n| ${msg} |\n${bracket}`)

@@ -6,7 +6,8 @@ export default function router($stateProvider, $urlRouterProvider) { "ngInject"
 	$stateProvider
 
 		.state('home', {
-			url: '/'
+			url: '/',
+			// component: 'rxHome'
 		})
 
 }
