@@ -9,5 +9,8 @@ angular
 		'ui.router', 
 		'ngAnimate'
 	])
+	.config($locationProvider => { "ngInject"
+		$locationProvider.hashPrefix('')
+	})
 	.config(router)
 

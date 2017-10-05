@@ -1,19 +1,17 @@
 
 <nav class="rx-navbar" ng-class="{open: $ctrl.menuOpen}">
 	
-	<i 
-		class="icon"
-		ng-click="$ctrl.menuOpen = !$ctrl.menuOpen"
-	></i>
+	<span class="title"></span>
+
 	<i 
 		class="icon ellipsis vertical"
 		ng-click="$ctrl.menuOpen = !$ctrl.menuOpen"
 	></i>
 
-	<div class="menu" ng-if="$ctrl.menuOpen">
+	<div class="menu animate-if" ng-if="$ctrl.menuOpen">
 		<a ui-sref="home" ui-sref-active="active">Home</a>
 		<a ui-sref="about" ui-sref-active="active">About</a>
-		<a ui-sref="gallery" ui-sref-active="active">Browse</a>
+		<a ui-sref="products" ui-sref-active="active">Browse</a>
 		<a ui-sref="orders" ui-sref-active="active">Orders</a>
 	</div>
 

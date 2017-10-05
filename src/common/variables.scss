@@ -27,33 +27,20 @@ $dark-rust: darken(saturate(adjust-hue($rust, -1), 17.35), 21.57);
 
 // Palette assignments
 
+// Layout
 
+$navbar-height: 50px;
 
 // Fluorishes
 
 $dropdown-shadow: -3px 3px 15px -3px rgba(0, 0, 0, 0.5);
+$transition-params: ease-in-out 200ms;
 
-// Responsive Breakpoints
+// Breakpoints
 
 @mixin mobile-or-tablet { 
-	@media 
-  // Galaxy S5
-  (height: 360px) and (width: 640px), (width: 360px) and (height: 640px),
-  // Nexus 5X
-  (height: 412px) and (width: 732px), (width: 412px) and (height: 732px),
-  // Nexus 6P
-  (height: 412px) and (width: 732px), (width: 412px) and (height: 732px),
-  // iPhone 5
-  (height: 320px) and (width: 568px), (width: 320px) and (height: 568px),
-  // iPhone 6
-  (height: 375px) and (width: 667px), (width: 375px) and (height: 667px),
-  // iPhone 6+
-  (height: 414px) and (width: 736px), (width: 414px) and (height: 736px),
-  // iPad
-  (height: 768px) and (width: 1024px), (width: 768px) and (height: 1024px),
-  // iPad pro
-  (height: 1024px) and (width: 1366px), (width: 1024px) and (height: 1366px)
-
-  { @content; }
+	@media (max-width: 550){ 
+    @content; 
+  }
 }
 

@@ -10,7 +10,7 @@ angular
 	})
 
 function controller() {
-	console.log(products)
+	// console.log(products)
 	this.products = products
 
 }

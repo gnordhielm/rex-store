@@ -5,7 +5,9 @@ angular
 	.module('root')
 	.component('rxGallery', {
 		template, controller,
-		bindings: {}
+		bindings: {
+			products: '<'
+		}
 	})
 
 function controller() {

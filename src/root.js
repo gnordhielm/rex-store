@@ -2,6 +2,8 @@
 // Libraries
 
 import angular from 'angular'
+import 'normalize.css'
+
 import './libraries/semantic-icons/icon.css'
 
 // Configuration

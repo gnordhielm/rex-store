@@ -8,7 +8,11 @@ angular
 		bindings: {}
 	})
 
-function controller() {
+function controller($transitions) { "ngInject"
 	const vm = this
-	vm.menuOpen = true
+	
+	$transitions.onSuccess({}, () => {
+		vm.menuOpen = false
+	})
+
 }

@@ -1,6 +1,8 @@
-$navbar-height: 50px;
+
 
 rx-navbar {
+
+
 	z-index: 5;
 	position: absolute;
 	top: 0;
@@ -9,9 +11,12 @@ rx-navbar {
 	display: block;
 
 	flex: 0 0 $navbar-height;
+
 }
 
 .rx-navbar {
+	transition: all $transition-params;
+	
 	z-index: 5;
 	height: $navbar-height;
 
@@ -24,19 +29,39 @@ rx-navbar {
 	justify-content: space-between;
 	align-items: center;
 
+
+	> span.title {
+		margin-left: 0.5em;
+		font-size: 1.1em;
+		font-weight: 300;
+		color: $gray;
+
+		&:after {
+			content: 'Rex Blankets';
+
+			// @include mobile-or-tablet {
+			// 		content: 'Rex Blankets';
+			// }
+
+		}
+
+
+	}
+
 	> i {
 
 		cursor: pointer;
 		font-size: 1.5em;
 		color: $gray;
 
-		&:hover {
-			color: $blue;
-		}
 	}
 
 	&.open {
 		border-color: $blue;
+
+		.menu {
+			border-color: $blue;
+		}
 
 		> i {
 			color: $blue;
@@ -51,7 +76,7 @@ rx-navbar {
 
 		top: calc(#{$navbar-height} + 2px);
 		background: $light-gray;
-		border-bottom: 2px solid $blue;
+		border-bottom: 2px solid $gray;
 		width: 100%;
 		padding: 2em 0;
 
