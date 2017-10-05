@@ -9,5 +9,6 @@ angular
 	})
 
 function controller() {
-	
+	const vm = this
+	vm.menuOpen = true
 }

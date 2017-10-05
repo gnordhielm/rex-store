@@ -14,6 +14,19 @@ h2 {
 	font-size: 1.5rem;
 }
 
+a {
+	color: $blue;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+	user-select: none;
+	background: none;
+
+	&:hover, &.active {
+		color: $dark-blue;
+	}
+}
+
 .logo {
   width: 100%;
   padding-bottom: 75%;

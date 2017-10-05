@@ -10,7 +10,7 @@
 		"id": 2,
 		"name": "Dog Gazebo",
 		"price": 350,
-		"blurb": "A perfect way to provide shelter for your dog pen and show off your brand.",
+		"blurb": "A perfect way to provide shelter for your dog pen and show off your brand."
 	},
 	{
 		"id": 3,
@@ -23,8 +23,7 @@
 		"id": 4,
 		"name": "Stall Drape",
 		"price": 0,
-		"blurb": "This drape is a drape with a valence in your barn colors, in either the WeatherMax or Sunbrella with polyester thread. The valence is removable for washing, easy packing, or setting up. It is 8ft tall by 10ft wide.",
-		"description": ""
+		"blurb": "This drape is a drape with a valence in your barn colors, in either the WeatherMax or Sunbrella with polyester thread. The valence is removable for washing, easy packing, or setting up. It is 8ft tall by 10ft wide."
 	},
 	{
 		"id": 5,

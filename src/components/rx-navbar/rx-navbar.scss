@@ -1,0 +1,65 @@
+$navbar-height: 50px;
+
+rx-navbar {
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: block;
+
+	flex: 0 0 $navbar-height;
+}
+
+.rx-navbar {
+	z-index: 5;
+	height: $navbar-height;
+
+	position: relative;
+	display: flex;
+
+	background: $dark-gray;
+	border-bottom: 2px solid $gray;
+
+	justify-content: space-between;
+	align-items: center;
+
+	> i {
+
+		cursor: pointer;
+		font-size: 1.5em;
+		color: $gray;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+
+	&.open {
+		border-color: $blue;
+
+		> i {
+			color: $blue;
+		}
+	}
+
+	.menu {
+		position: absolute;
+		z-index: 4;
+		display: flex;
+		flex-flow: column nowrap;
+
+		top: calc(#{$navbar-height} + 2px);
+		background: $light-gray;
+		border-bottom: 2px solid $blue;
+		width: 100%;
+		padding: 2em 0;
+
+		a {
+			text-align: center;
+			padding: 0.5em 0;
+			font-weight: 300;
+		}
+
+	}
+}

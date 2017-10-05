@@ -1,4 +1,5 @@
 
+import products from '../../assets/products.json'
 import template from './rx-home.html'
 
 angular
@@ -9,5 +10,7 @@ angular
 	})
 
 function controller() {
-	
+	console.log(products)
+	this.products = products
+
 }
