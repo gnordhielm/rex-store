@@ -3,16 +3,29 @@
 	
 	<span class="title"></span>
 
-	<i 
-		class="icon ellipsis vertical"
-		ng-click="$ctrl.menuOpen = !$ctrl.menuOpen"
-	></i>
-
-	<div class="menu animate-if" ng-if="$ctrl.menuOpen">
+	<div class="menu expanded">
 		<a ui-sref="home" ui-sref-active="active">Home</a>
 		<a ui-sref="about" ui-sref-active="active">About</a>
 		<a ui-sref="products" ui-sref-active="active">Browse</a>
 		<a ui-sref="orders" ui-sref-active="active">Orders</a>
 	</div>
+
+	<i 
+		id="menu-trigger" 
+		class="icon ellipsis vertical"
+		ng-click="$ctrl.menuOpen = !$ctrl.menuOpen"
+	></i>
+
+	<div class="menu dropdown animate-if" ng-if="$ctrl.menuOpen">
+		<a ui-sref="home" ui-sref-active="active">Home</a>
+		<a ui-sref="about" ui-sref-active="active">About</a>
+		<a ui-sref="products" ui-sref-active="active">Browse</a>
+		<a ui-sref="orders" ui-sref-active="active">Orders</a>
+	</div>
+
+	<div 
+		class="faded background"
+		ng-click="$ctrl.menuOpen = false"
+	></div>
 
 </nav>

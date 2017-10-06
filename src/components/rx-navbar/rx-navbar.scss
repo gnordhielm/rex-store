@@ -13,13 +13,20 @@ rx-navbar {
 
 	flex: 0 0 $navbar-height;
 
+	* {
+		transition: all $transition-params;
+	}
 }
 
 .rx-navbar {
-	transition: all $transition-params;
-	
+
 	z-index: 5;
+
 	height: $navbar-height;
+
+	@include mobile-or-tablet {
+		height: $navbar-height-mobile;
+	}
 
 	position: relative;
 	display: flex;
@@ -33,23 +40,32 @@ rx-navbar {
 
 	> span.title {
 		margin-left: 0.5em;
-		font-size: 1.5em;
 		font-weight: 300;
 		color: $gray;
 
-		&:after {
-			content: 'Rex Blankets';
+		font-size: 1.25em;
+		@include mobile-or-tablet {
+			font-size: 1.5em;
+		}
 
-			// @include mobile-or-tablet {
-			// 		content: 'Rex Blankets';
-			// }
+		&:after {
+
+			content: 'Rex Blankets & Stablewares';
+			@include mobile-or-tablet {
+				content: 'Rex Blankets';
+			}
 
 		}
 
-
 	}
 
-	> i {
+
+	> i#menu-trigger {
+
+		display: none;
+		@include mobile-or-tablet {
+			display: initial;
+		}
 
 		cursor: pointer;
 		font-size: 2em;
@@ -57,39 +73,111 @@ rx-navbar {
 
 	}
 
+	.faded.background {
+		transition: opacity 250ms ease-in-out 90ms;
+		visibility: hidden;
+		opacity: 0;
+  	position: fixed;
+	}
+
 	&.open {
 		border-color: $blue;
 
-		.menu {
+		.menu.dropdown {
 			border-color: $blue;
 		}
 
-		> i {
+		> i#menu-trigger {
 			color: $blue;
+		}
+
+		.faded.background {
+			@include mobile-or-tablet {
+	    	content:'';
+	    	visibility: visible;
+
+	    	z-index: -1;
+	    	bottom: 0;
+	    	left: 0;
+	    	
+	    	background: $dark-gray;
+	    	opacity: 0.4;
+
+	    	height: calc(100% - #{$navbar-height-mobile});
+	    	width: 100%;
+			}
 		}
 	}
 
 	.menu {
-		position: absolute;
-		z-index: 4;
-		display: flex;
-		flex-flow: column nowrap;
-
-		top: calc(#{$navbar-height} + 2px);
-		background: $light-gray;
-		border-bottom: 2px solid $gray;
-		width: 100%;
-		padding: 2em 0;
-    bottom: 0;
-    left: 0;
-    height: 11em;
 
 		a {
-			font-size: 1.25em;
 			text-align: center;
-			padding: 0.5em 0;
-			font-weight: 300;
+
+			padding-left: 1em;
+			font-weight: 100;
+			font-size: 1.1em;
+			color: $gray;
+
+			@include mobile-or-tablet {
+				padding: 0.5em 0;
+				font-weight: 300;
+				font-size: 1.25em;
+				color: $blue;
+			}
+
+			&:hover, &.active {
+				color: $blue;
+				@include mobile-or-tablet {
+					color: $dark-blue;
+				}
+			}
+				
+		}
+
+		&.expanded {
+
+			flex: 1;
+
+			display: flex;
+			@include mobile-or-tablet {
+				display: none;
+			}
+
+			justify-content: flex-end;
+
+			padding-right: 2em;
+
+		}
+
+		&.dropdown {
+
+			display: none;
+			@include mobile-or-tablet {
+				display: flex;
+			}
+
+			z-index: 4;
+			position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    
+			flex-flow: column nowrap;
+
+			top: $navbar-height;
+			@include mobile-or-tablet {
+				top: $navbar-height-mobile;
+			}
+			
+			background: $light-gray;
+			border-bottom: 2px solid $gray;
+			width: 100%;
+			padding: 2em 0;
+	    height: 15em;
+
 		}
 
 	}
+
+
 }

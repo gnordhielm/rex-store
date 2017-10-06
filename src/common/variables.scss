@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,500,500i,700,700i,900,900i');
 
 // Typography
 
@@ -27,9 +27,12 @@ $dark-rust: darken(saturate(adjust-hue($rust, -1), 17.35), 21.57);
 
 // Palette assignments
 
+$app-background: $light-gray;
+
 // Layout
 
-$navbar-height: 60px;
+$navbar-height: 50px;
+$navbar-height-mobile: 65px;
 
 // Fluorishes
 
@@ -38,8 +41,10 @@ $transition-params: ease-in-out 200ms;
 
 // Breakpoints
 
+// $mobile-breakpoint: 55
+
 @mixin mobile-or-tablet { 
-	@media (max-width: 550){ 
+	@media (max-width: 650px){ 
     @content; 
   }
 }
