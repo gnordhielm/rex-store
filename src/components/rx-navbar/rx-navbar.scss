@@ -2,9 +2,10 @@
 
 rx-navbar {
 
+	font-size: 1rem;
 
 	z-index: 5;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -81,6 +82,7 @@ rx-navbar {
 		padding: 2em 0;
 
 		a {
+			font-size: 1.25em;
 			text-align: center;
 			padding: 0.5em 0;
 			font-weight: 300;
