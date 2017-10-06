@@ -33,7 +33,7 @@ rx-navbar {
 
 	> span.title {
 		margin-left: 0.5em;
-		font-size: 1.1em;
+		font-size: 1.5em;
 		font-weight: 300;
 		color: $gray;
 
@@ -52,7 +52,7 @@ rx-navbar {
 	> i {
 
 		cursor: pointer;
-		font-size: 1.5em;
+		font-size: 2em;
 		color: $gray;
 
 	}
@@ -80,6 +80,9 @@ rx-navbar {
 		border-bottom: 2px solid $gray;
 		width: 100%;
 		padding: 2em 0;
+    bottom: 0;
+    left: 0;
+    height: 11em;
 
 		a {
 			font-size: 1.25em;
