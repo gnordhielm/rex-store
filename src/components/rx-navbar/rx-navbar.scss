@@ -32,7 +32,10 @@ rx-navbar {
 	display: flex;
 
 	background: $dark-gray;
-	border-bottom: 2px solid $gray;
+	border-bottom: 1px solid $blue;
+	@include mobile-or-tablet {
+		border-bottom: 2px solid $gray;
+	}
 
 	justify-content: space-between;
 	align-items: center;
@@ -59,7 +62,6 @@ rx-navbar {
 
 	}
 
-
 	> i#menu-trigger {
 
 		display: none;
@@ -81,7 +83,10 @@ rx-navbar {
 	}
 
 	&.open {
-		border-color: $blue;
+
+		@include mobile-or-tablet {
+			border-color: $blue;
+		}
 
 		.menu.dropdown {
 			border-color: $blue;
@@ -116,7 +121,7 @@ rx-navbar {
 
 			padding-left: 1em;
 			font-weight: 100;
-			font-size: 1.1em;
+			font-size: 1em;
 			color: $gray;
 
 			@include mobile-or-tablet {
