@@ -11,7 +11,5 @@ angular
 	})
 
 function controller() {
-	this.$onChanges = bindings => {
-		console.log(bindings.item)
-	}
+	this.$onChanges = bindings => {}
 }

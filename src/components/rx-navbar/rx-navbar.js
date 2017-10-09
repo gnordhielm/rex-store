@@ -8,7 +8,7 @@ angular
 		bindings: {}
 	})
 
-function controller($transitions, $root) { "ngInject"
+function controller($element, $transitions, $root) { "ngInject"
 	
 	const vm = this
 

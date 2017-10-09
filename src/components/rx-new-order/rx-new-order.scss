@@ -1,0 +1,12 @@
+.rx-new-order {
+
+	.order {
+		display: flex;
+		flex-flow: column nowrap;
+
+		.price, img {
+			align-self: center;
+		}
+		
+	}
+}

@@ -18,11 +18,10 @@ function router($stateProvider, $urlRouterProvider, $rootProvider) { "ngInject"
 		},
 		{
 			name: 'gallery',
-			title: 'recent work',
 		},
 		{
 			name: 'new-order',
-			title: 'start and order',
+			title: 'start an order',
 		}
 	]
 

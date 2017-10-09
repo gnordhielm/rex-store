@@ -1,0 +1,15 @@
+<div class="rx-new-order">
+	
+	<h2>Start an order</h2>
+	<p>First, select a product to add to your order.</p>
+	<p>You can easily save your order for later or share it, so take your time!</p>
+
+	<hr>
+
+	<div class="order" ng-repeat="product in $ctrl.products">
+		<h2>{{ product.name }}</h2>
+		<img src="http://via.placeholder.com/150x150">
+		<p class="price">${{ product.price }}</p>
+		<p>{{ product.blurb }}</p>
+	</div>
+</div>
