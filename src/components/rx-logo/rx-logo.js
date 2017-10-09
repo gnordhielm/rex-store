@@ -6,10 +6,17 @@ angular
 	.component('rxLogo', {
 		template, controller,
 		bindings: {
-			text: '<'
+			text: '@'
 		}
 	})
 
 function controller() {
+
+	this.$onChanges = bindings => {
+		for (let key in bindings) {
+			if (key === 'text') this.text = typeof bindings[key].currentValue === 'string'
+		}
+	}
+
 
 }
