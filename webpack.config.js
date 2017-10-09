@@ -3,10 +3,6 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
-const extractSass = new ExtractTextPlugin({
-    filename: "style.bundle.[contenthash].css",
-})
-
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 
@@ -18,7 +14,7 @@ module.exports = {
 
   output: {
     filename: '[name].bundle.js',
-    publicPath: '/',
+    publicPath: '',
     path: path.resolve(__dirname, 'dist')
   },
 
@@ -40,12 +36,12 @@ module.exports = {
 
       {
         test: /\.html$/,
-        use: [{ loader: 'raw-loader' }]
+        use: ['raw-loader']
       },
 
       {
         test: /\.(css|scss)$/,
-        use: extractSass.extract({
+        use: ExtractTextPlugin.extract({
             use: [{
               loader: "css-loader",
               options: { sourceMap: true, importLoaders: 1 }
@@ -63,35 +59,28 @@ module.exports = {
 
       {
         test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader']
-      },
+        use: ['url-loader']
+      }
 
     ]
-
-    // loaders: [
-    //    { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
-    //    { test: /\.html$/, loader: 'raw' },
-    //    { test: /\.(scss|sass)$/, loader: 'style!css!sass' },
-    //    { test: /\.css$/, loader: 'style!css' }
-    // ]
   },
 
   plugins: [
 
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      inject: 'head',
+      inject: 'body',
       hash: true
     }),
 
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module, count) {
-        return module.resource && !~module.resource.indexOf(path.resolve(__dirname, 'src'))
+        return module.resource && !~module.resource.indexOf('node_modules')
       }
     }),
 
-    extractSass,
+    new ExtractTextPlugin('style.bundle.css'),
 
     new CleanWebpackPlugin(['dist'])
 

@@ -1,3 +1,21 @@
 .rx-about {
 
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+
+	img.polaroid {
+		box-sizing: content-box;
+		align-self: center;
+		width: 80%;
+		border: 15px solid $dark-gray;
+		box-shadow: $image-shadow;
+		margin-bottom: 1em;
+	}
+
+	p {
+		color: $dark-gray;
+		font-weight: 300;
+	}
+
 }

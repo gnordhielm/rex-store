@@ -1,53 +1,83 @@
 
+import _ from 'lodash'
 import products from './assets/products.json'
 
-export default function router($stateProvider, $urlRouterProvider) { "ngInject"
+angular
+	.module('root')
+	.config(router)
+
+function router($stateProvider, $urlRouterProvider, $rootProvider) { "ngInject"
 	
+	const routes = [
+		{
+			name: 'home',
+			url: '/',
+		},
+		{
+			name: 'about',
+		},
+		{
+			name: 'gallery',
+			title: 'recent work',
+		},
+		{
+			name: 'new-order',
+			title: 'start and order',
+		}
+	]
+
+	$rootProvider.setRoutes(routes)
+
 	$urlRouterProvider.otherwise('/')
 
-	$stateProvider
+	routes.forEach(route => {
 
-		.state('home', {
-			url: '/',
-			component: 'rxHome'
+		let { name, url, title, component } = route
+
+		title = title || name
+
+		$stateProvider.state({
+			name,
+			url: url || `/${name}`,
+			title: _.startCase(title),
+			component: component || _.camelCase(`rx ${name}`)
 		})
 
-		.state('about', {
-			url: '/about',
-			component: 'rxAbout'
-		})
+	})
 
-		.state('products', {
-			url: '/gallery',
-			component: 'rxGallery',
-			resolve: {
-				products: ($transition$) => {
-					// console.log($transition$)
-					return true
-				}
-				// products: (ProductService) => {
-					// return ProductService.index()
-					// return products
-				// }
-			}
-		})
+	// $stateProvider
 
-		.state('products.product', {
-			url: '/{productId}',
-			component: 'rxGallery',
-			resolve: {
-				product: (products, $stateParams) => {
-					return products.find(product => product.id === $stateParams.productId)
-				}
-				// product: ($transition$, ProductService) => {
-					// return ProductService.read($transition$.params().personId)
-				// }
-			}
-		})
+	// 	.state('home', {
+	// 		url: '/',
+	// 		component: 'rxHome'
+	// 	})
 
-		.state('orders', {
-			url: '/orders',
-			component: 'rxOrders'
-		})
+	// 	.state('about', {
+	// 		url: '/about',
+	// 		component: 'rxAbout'
+	// 	})
+
+	// 	.state('products', {
+	// 		url: '/gallery',
+	// 		component: 'rxGallery',
+	// 	})
+
+	// 	.state('products.product', {
+	// 		url: '/{productId}',
+	// 		component: 'rxGallery',
+	// 		resolve: {
+	// 			product: (products, $stateParams) => {
+	// 				return products.find(product => product.id === $stateParams.productId)
+	// 			}
+	// 			// product: ($transition$, ProductService) => {
+	// 				// return ProductService.read($transition$.params().personId)
+	// 			// }
+	// 		}
+	// 	})
+
+	// 	.state('orders', {
+	// 		url: '/orders',
+	// 		component: 'rxOrders'
+	// 	})
 
 }

@@ -1,13 +1,15 @@
 
 <nav class="rx-navbar" ng-class="{open: $ctrl.menuOpen}">
 	
-	<span class="title"></span>
+	<span class="title">
+	</span>
 
 	<div class="menu expanded">
-		<a ui-sref="home" ui-sref-active="active">Home</a>
-		<a ui-sref="about" ui-sref-active="active">About</a>
-		<a ui-sref="products" ui-sref-active="active">Browse</a>
-		<a ui-sref="orders" ui-sref-active="active">Orders</a>
+		<a 
+			ng-repeat="route in $ctrl.routes" 
+			ui-sref="{{ ::route }}" 
+			ui-sref-active="active"
+		>{{ ::route | toCase:'title' }}</a>
 	</div>
 
 	<i 
@@ -17,10 +19,11 @@
 	></i>
 
 	<div class="menu dropdown animate-if" ng-if="$ctrl.menuOpen">
-		<a ui-sref="home" ui-sref-active="active">Home</a>
-		<a ui-sref="about" ui-sref-active="active">About</a>
-		<a ui-sref="products" ui-sref-active="active">Browse</a>
-		<a ui-sref="orders" ui-sref-active="active">Orders</a>
+		<a 
+			ng-repeat="route in $ctrl.routes" 
+			ui-sref="{{ ::route }}" 
+			ui-sref-active="active"
+		>{{ ::route | toCase:'title' }}</a>
 	</div>
 
 	<div 

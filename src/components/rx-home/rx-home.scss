@@ -4,6 +4,18 @@ rx-home {
 }
 
 .rx-home {
+
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	padding-top: 2em;
+
+	rx-logo {
+		width: 210px;
+		font-size: 1.25em;
+	}
+
 	.social.shelf {
 		text-align: center;
 		font-size: 2em;

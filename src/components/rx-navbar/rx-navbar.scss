@@ -34,7 +34,7 @@ rx-navbar {
 	background: $dark-gray;
 	border-bottom: 1px solid $blue;
 	@include mobile-or-tablet {
-		border-bottom: 2px solid $gray;
+		border-bottom: 2px solid $blue;
 	}
 
 	justify-content: space-between;
@@ -45,17 +45,18 @@ rx-navbar {
 		margin-left: 0.5em;
 		font-weight: 300;
 		color: $gray;
-
-		font-size: 1.25em;
-		@include mobile-or-tablet {
-			font-size: 1.5em;
-		}
+		margin-top: -0.25em;
 
 		&:after {
 
+			font-family: 'Aleo Italic';
+			font-size: 1.25em;
 			content: 'Rex Blankets & Stablewares';
+
 			@include mobile-or-tablet {
-				content: 'Rex Blankets';
+				font-size: 2.9em;
+				font-family: 'Aleo';
+				content: 'Rex';
 			}
 
 		}
@@ -121,7 +122,7 @@ rx-navbar {
 
 			padding-left: 1em;
 			font-weight: 100;
-			font-size: 1em;
+			font-size: 1.05em;
 			color: $gray;
 
 			@include mobile-or-tablet {

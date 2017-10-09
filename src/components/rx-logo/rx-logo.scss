@@ -1,0 +1,33 @@
+rx-home {
+	display: block;
+	z-index: 0;
+}
+
+.rx-logo {
+
+	width: 100%;
+	max-width: 250px;
+
+	> svg {
+
+		.blanket {
+			fill: $blue;
+		}
+
+		.lettering {
+			fill: $dark-blue;
+		}
+		
+	}
+
+	> p {
+		margin: 0.25em 0 1em;
+		text-align: center;
+		color: $blue;
+
+		font-family: 'Aleo', serif;
+		font-size: 1em;
+	}
+	
+
+}

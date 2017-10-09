@@ -2,8 +2,6 @@
 import '@uirouter/angularjs'
 import 'angular-animate'
 
-import router from './root.router.js'
-
 angular
 	.module('root', [
 		'ui.router', 
@@ -12,5 +10,4 @@ angular
 	.config($locationProvider => { "ngInject"
 		$locationProvider.hashPrefix('')
 	})
-	.config(router)
 

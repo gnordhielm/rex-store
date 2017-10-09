@@ -1,5 +1,7 @@
 
+import copy from '../../assets/copy.json'
 import template from './rx-about.html'
+import workingImg from '../../assets/working.png'
 
 angular
 	.module('root')
@@ -9,5 +11,10 @@ angular
 	})
 
 function controller() {
+
+	const vm = this
+
+	vm.copy = copy.about
+	vm.workingImg = workingImg
 
 }

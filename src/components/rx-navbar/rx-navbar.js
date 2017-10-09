@@ -8,11 +8,22 @@ angular
 		bindings: {}
 	})
 
-function controller($transitions) { "ngInject"
-	const vm = this
+function controller($transitions, $root) { "ngInject"
 	
-	$transitions.onSuccess({}, () => {
-		vm.menuOpen = false
-	})
+	const vm = this
+
+	vm.$onInit = () => {
+
+		$transitions.onSuccess({}, () => {
+			vm.menuOpen = false
+		})
+
+		vm.routes = $root.routes.map(route => {
+			return route.name
+		})
+
+
+	}
+	
 
 }

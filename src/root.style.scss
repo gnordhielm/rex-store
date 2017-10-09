@@ -6,6 +6,9 @@
 @import './components/rx-app/rx-app.scss';
 @import './components/rx-navbar/rx-navbar.scss';
 @import './components/rx-home/rx-home.scss';
+@import './components/rx-logo/rx-logo.scss';
+@import './components/rx-about/rx-about.scss';
+@import './components/rx-gallery/rx-gallery.scss';
 
 // ROOT STYLES
 
@@ -33,9 +36,9 @@ body {
 		background: $app-background;
 		flex: 1;
 
-		padding-top: $navbar-height;
+		padding: calc(#{$navbar-height} + 1em) 2em 1em;
 		@include mobile-or-tablet {
-			padding-top: $navbar-height-mobile;
+			padding: calc(#{$navbar-height-mobile} + 2.5em) 2em 2.5em;
 		}
 
 	}

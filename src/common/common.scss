@@ -8,10 +8,14 @@ h1 {
 
 h2 {
 	text-align: center;
-	color: $blue;
+	color: $dark-gray;
 
 	font-family: 'Aleo', serif;
 	font-size: 1.5rem;
+}
+
+p {
+	color: $dark-gray;
 }
 
 a {
@@ -22,6 +26,10 @@ a {
 	user-select: none;
 	background: none;
 
+}
+
+img {
+	max-width: 100%;
 }
 
 .logo {

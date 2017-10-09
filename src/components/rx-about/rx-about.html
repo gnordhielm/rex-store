@@ -1,3 +1,7 @@
 <div class="rx-about">
-About
+	<img class="polaroid" ng-src="{{ ::$ctrl.workingImg }}">
+	<h2>Rex Blankets, est. 2017</h2>
+	<p ng-repeat="p in $ctrl.copy">
+		{{ ::p }}
+	</p>
 </div>
