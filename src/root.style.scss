@@ -43,4 +43,34 @@ body {
 
 	}
 
+	footer {
+		padding: 0.25em 0.5em;
+		background: $dark-gray;
+
+		// display: flex;
+		// justify-content: space-between;
+		// align-items: center;
+		text-align: center;
+		
+		span {
+			margin: 0.25em 0;
+			// padding: 0;
+			font-size: 0.75em;
+			color: $gray;
+			opacity: 0.5;
+			font-weight: 100;
+
+			a {
+				color: $light-gray;
+			}
+
+			@include desktop {
+				display: inline-block;
+				font-size: 0.9em;
+				margin: 0 1em;
+			}
+
+		}
+	}
+
 }

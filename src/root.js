@@ -11,6 +11,7 @@ import './libraries/semantic-icons/icon.css'
 import './root.module.js'
 import './root.service.js'
 import './root.router.js'
+import './root.controller.js'
 import './root.filters.js'
 
 // Stylesheets

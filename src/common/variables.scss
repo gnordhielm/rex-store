@@ -55,7 +55,13 @@ $transition-params: ease-in-out 200ms;
 // $mobile-breakpoint: 55
 
 @mixin mobile-or-tablet { 
-	@media (max-width: 650px){ 
+  @media (max-width: 650px){ 
+    @content; 
+  }
+}
+
+@mixin desktop { 
+	@media (min-width: 650px){ 
     @content; 
   }
 }
